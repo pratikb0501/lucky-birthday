@@ -17,17 +17,14 @@ const calculateSum = (dob) => {
     let sum = 0;
     for (i = 0; i < dob.length; i++) {
         sum += Number(dob.charAt(i));
-        console.log("sum", sum)
     }
     return sum;
 }
 
 const compareValues = (sum, luckyNum) => {
     if (sum % luckyNum == 0) {
-        //console.log("lucky");
         showError("Yaay, your birth date is lucky!!🎉");
     } else {
-        //console.log("unlucky");
         showError("Oops, not lucky enough 😪");
     }
 };
@@ -37,7 +34,6 @@ const compareValues = (sum, luckyNum) => {
 checkBtn.addEventListener("click", () => {
     let dateOfBirth = dob.value;
     let number = num.value;
-    console.log("dateOfBirth:", dateOfBirth, "number", number)
     if (!dateOfBirth) {
         showError("Please valid correct date of birth")
         return;
